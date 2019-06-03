@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Java基础知识1</title>
+      <link href="/2019/06/03/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/"/>
+      <url>/2019/06/03/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/</url>
+      
+        <content type="html"><![CDATA[<p>##1. 如何理解：Write once, Run anywhere？<br>        当源码(.java文件)编写好后，首先编译生成.class文件（字节码文件）<br>    JVM作用是将通用的.class文件翻译成特定平台下的机器码然后运行。<br>    1.执行的是字节码(bytecode),而不是二进制码<br>    2.java语言跨平台本质上并不是JVM跨平台</p><p>##2. JVM，JRE，JDK的区别与联系？</p><h3 id="a-JVM"><a href="#a-JVM" class="headerlink" title="a. JVM:"></a>a. JVM:</h3><pre><code>JVM就是我们常说的java虚拟机，它是整个java实现跨平台的 最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可 以在虚拟机上执行，也就是说class并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解 释给本地系统执行。</code></pre><h3 id="b-JRE："><a href="#b-JRE：" class="headerlink" title="b. JRE："></a>b. JRE：</h3><pre><code>JRE是指Java的运行环境，而且在jre目录中有两个文件夹bin和lib,在这里可以认为bin里的就是jvm，lib中则是jvm工 作所需要的类库，而jvm和 lib和起来就称为jre。</code></pre><h3 id="c-JDK："><a href="#c-JDK：" class="headerlink" title="c. JDK："></a>c. JDK：</h3><pre><code>是java开发工具包，有一个src类库源码压缩包、和其他几个声明文件。Bin,include,lib,jre四个文件夹。§ bin: 最主要的是编译器(javac.exe)§ include: java和JVM交互用的头文件§ lib: 类库§ jre: java运行环境</code></pre><h3 id="d-两个jre的联系和区别"><a href="#d-两个jre的联系和区别" class="headerlink" title="d. 两个jre的联系和区别"></a>d. 两个jre的联系和区别</h3><pre><code>jdk里的jre和独立安装的jre完全相同，没有区别，在jdk里的jre既是工具环境又是运行环境。单独出来只是为了满足只有运行没有编写的场景和情形。 HelloWorld.java --&gt;javac 编译 --&gt; HelloWorld.class --&gt;java 解释执行 --&gt; 该系统环境下的机器码(二进制码)--&gt;运行结果</code></pre><h3 id="e-SDK"><a href="#e-SDK" class="headerlink" title="e. SDK"></a>e. SDK</h3><pre><code>是Software Development Kit缩写，泛指所有软件开发工具包。</code></pre><p>##3.     常见的 Dos 命令<br>        ○ 盘符切换：d:<br>        ○ 列出目录下的所有文件和文件夹：dir<br>        ○ 创建目录：md aaa<br>        ○ 删除目录：rd aaa<br>        ○ 切换路径：cd<br>            § 单级切换：cd aaa<br>            § 多级切换：cd aaa/bbb<br>            § 切换到上一级目录: cd ..    cd ../..<br>            § 切换到根目录：cd /<br>        ○ 删除文件：del<br>            § del a.txt<br>        ○ 删除多个文件：<br>            § del <em>.java<br>            § del *副本</em>.java<br>        ○ 清屏：cls<br>        ○ 退出：exit</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Set接口</title>
+      <link href="/2019/06/03/Set%E6%8E%A5%E5%8F%A3/"/>
+      <url>/2019/06/03/Set%E6%8E%A5%E5%8F%A3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java集合框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java基础知识</title>
+      <link href="/2019/06/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+      <url>/2019/06/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<p>###java集合框架</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一篇文章</title>
       <link href="/2019/05/29/checkout/"/>
       <url>/2019/05/29/checkout/</url>
