@@ -627,7 +627,7 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/Java基础知识/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/Java基础知识2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ethan Wong">
@@ -646,7 +646,7 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/02/Java基础知识/" itemprop="url">Java基础知识</a></h2>
+                <a class="post-title-link" href="/2019/06/02/Java基础知识2/" itemprop="url">Java基础知识2</a></h2>
         
 
         <div class="post-meta">
@@ -690,7 +690,7 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5
+                  561
                 </span>
               
 
@@ -706,7 +706,7 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -729,7 +729,11 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
       
         
           
-            <p>###java集合框架</p>
+            <p>##数据类型：</p>
+<h5 id="1-Java是一种强类型语言，针对每种数据都提供了对应的数据类型。"><a href="#1-Java是一种强类型语言，针对每种数据都提供了对应的数据类型。" class="headerlink" title="(1) Java是一种强类型语言，针对每种数据都提供了对应的数据类型。"></a>(1) Java是一种强类型语言，针对每种数据都提供了对应的数据类型。</h5><h5 id="2-分类："><a href="#2-分类：" class="headerlink" title="(2) 分类："></a>(2) 分类：</h5><pre><code>A. 基本数据类型
+B. 引用数据类型：类，接口，数组。</code></pre><h5 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="(3) 类型转换"></a>(3) 类型转换</h5><h6 id="i-boolean类型不参和其他类型进行转换。"><a href="#i-boolean类型不参和其他类型进行转换。" class="headerlink" title="i. boolean类型不参和其他类型进行转换。"></a>i. boolean类型不参和其他类型进行转换。</h6><h6 id="ii-默认转换：要从小到大"><a href="#ii-默认转换：要从小到大" class="headerlink" title="ii. 默认转换：要从小到大"></a>ii. 默认转换：要从小到大</h6><pre><code>A. byte,short,char --&gt; int --&gt; long --&gt; float --&gt; double
+B. byte,short,char之间不相互转换，直接转成int类型参与运算。即使是同一个数据类型的运算，也会先转换成int类型。</code></pre><h5 id="4-运算"><a href="#4-运算" class="headerlink" title="(4) 运算"></a>(4) 运算</h5><h6 id="i-字符运算相当于ASCII码int型运算"><a href="#i-字符运算相当于ASCII码int型运算" class="headerlink" title="i. 字符运算相当于ASCII码int型运算"></a>i. 字符运算相当于ASCII码int型运算</h6><h6 id="ii-字符串运算相当于拼接"><a href="#ii-字符串运算相当于拼接" class="headerlink" title="ii. 字符串运算相当于拼接"></a>ii. 字符串运算相当于拼接</h6><p>##变量：<br>    1.成员变量（instance variable）：又叫做对象变量、类成员变量<br>        随着对象的建立而存在堆内存中。<br>    2.局部变量（local）：声明在方法中的变量。在栈中<br>        只存在于方法中，无法在方法外进行任何操作，<br>    3.类变量（静态变量）static+变量<br>        是一种比较特殊的实例变量，是类中独立于方法之外的变量，用static关键字修饰。在程序加载时就为它在堆中开辟了内存，而且静态变量的生命周期将一直持续到整个系统关闭。</p>
+<p>##运算符：<br>        (1) 算术运算符<br>            i. ++和–放在操作数后面的原理 举例：a = a++;<br>                int temp = a;<br>                a++;<br>                a = temp;<br>        (2) 赋值运算符<br>            i. 赋值运算符“=”特点<br>                A. 赋值运算符从右向左结合<br>                B. 赋值表达式有值=右边表达式的值<br>            ii. 扩展运算符“+=”，“-=”等等<br>                A. 隐含了自动强制转换<br>        (3) 比较运算符<br>            i. 最终结果始终是boolean类型<br>        (4) 逻辑运算符<br>            i. ^:相同则false,不同则true<br>            ii. &amp;&amp;和&amp;的区别，&amp;&amp;有短路效果<br>        (5) 位运算符<br>                a: 判断一个数是否是奇数    a &amp; 1 == 1;<br>                b: 对2 ^ n 取余。        a &amp; (2^n - 1);<br>                c: 如何判断一个数是否是2^n    a &amp; (a-1) == 0<br>                d: 两个整数之间的交换；<br>                e: 有一堆数，都是成对出现的，只有一个单独的，找出这个单独的数<br>                f: 用最有效率的方式求2 * 8的值        2 &lt;&lt; 3;</p>
 
           
         
@@ -1250,7 +1254,7 @@ JVM作用是将通用的.class文件翻译成特定平台下的机器码然后�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">598</span>
+    <span title="Site words total count">1.2k</span>
   
 </div>
 
