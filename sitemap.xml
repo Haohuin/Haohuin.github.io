@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/06/08/Java%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2019-06-08T14:35:06.443Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/06/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%862/</loc>
     
     <lastmod>2019-06-04T06:28:19.993Z</lastmod>
@@ -12,20 +19,6 @@
     <loc>http://yoursite.com/2019/06/03/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/</loc>
     
     <lastmod>2019-06-03T07:50:21.874Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/06/03/Set%E6%8E%A5%E5%8F%A3/</loc>
-    
-    <lastmod>2019-06-03T04:02:17.082Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/29/checkout/</loc>
-    
-    <lastmod>2019-06-02T07:13:43.507Z</lastmod>
     
   </url>
   
@@ -47,13 +40,6 @@
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-06-02T06:57:59.565Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/05/29/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
-    
-    <lastmod>2019-05-29T13:00:28.861Z</lastmod>
     
   </url>
   

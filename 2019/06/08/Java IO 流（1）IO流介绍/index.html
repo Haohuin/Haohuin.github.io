@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Java,IO流,">
 
 
 
@@ -79,16 +79,24 @@
 
 
 
-<meta name="description" content="记录一段历程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ethan 的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Java IO 流（1）IO流介绍IO流定义：流的本质是一组单向有序，分起始和终止的数据传输过程。需要导入import java.io.\*IO流分类：按数据类型分为：字节流和字符流字节流：按字节进行读取（可以处理任意类型数据）字符流字节流 \+ 编码表（处理纯文本数据优先考虑） 按数据流向分为：输入流和输出流输入流有Reader（字符输入流）、InputStream（字节输入流）输出流有Writ">
+<meta name="keywords" content="Java,IO流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaIO 流（1）IO流介绍">
+<meta property="og:url" content="http://yoursite.com/2019/06/08/Java IO 流（1）IO流介绍/index.html">
 <meta property="og:site_name" content="Ethan 的博客">
-<meta property="og:description" content="记录一段历程">
+<meta property="og:description" content="Java IO 流（1）IO流介绍IO流定义：流的本质是一组单向有序，分起始和终止的数据传输过程。需要导入import java.io.\*IO流分类：按数据类型分为：字节流和字符流字节流：按字节进行读取（可以处理任意类型数据）字符流字节流 \+ 编码表（处理纯文本数据优先考虑） 按数据流向分为：输入流和输出流输入流有Reader（字符输入流）、InputStream（字节输入流）输出流有Writ">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C20170105182342227.jpg">
+<meta property="og:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C%E6%97%A0%E6%A0%87%E9%A2%98.png">
+<meta property="og:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C%E6%97%A0%E6%A0%87%E9%A2%982.png">
+<meta property="og:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C%E6%97%A0%E6%A0%87%E9%A2%985.png">
+<meta property="og:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C%E6%97%A0%E6%A0%87%E9%A2%984.png">
+<meta property="og:updated_time" content="2019-06-08T14:35:06.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ethan 的博客">
-<meta name="twitter:description" content="记录一段历程">
+<meta name="twitter:title" content="JavaIO 流（1）IO流介绍">
+<meta name="twitter:description" content="Java IO 流（1）IO流介绍IO流定义：流的本质是一组单向有序，分起始和终止的数据传输过程。需要导入import java.io.\*IO流分类：按数据类型分为：字节流和字符流字节流：按字节进行读取（可以处理任意类型数据）字符流字节流 \+ 编码表（处理纯文本数据优先考虑） 按数据流向分为：输入流和输出流输入流有Reader（字符输入流）、InputStream（字节输入流）输出流有Writ">
+<meta name="twitter:image" content="f:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C20170105182342227.jpg">
 
 
 
@@ -118,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/08/Java IO 流（1）IO流介绍/">
 
 
 
 
 
-  <title>Ethan 的博客</title>
+  <title>JavaIO 流（1）IO流介绍 | Ethan 的博客</title>
   
 
 
@@ -143,8 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,9 +296,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -321,9 +328,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/08/Java IO 流（1）IO流介绍/" itemprop="url">JavaIO 流（1）IO流介绍</a></h2>
+          <h2 class="post-title" itemprop="name headline">JavaIO 流（1）IO流介绍</h2>
         
 
         <div class="post-meta">
@@ -426,9 +431,7 @@
       
 
       
-        
-          
-            <h1 id="Java-IO-流（1）IO流介绍"><a href="#Java-IO-流（1）IO流介绍" class="headerlink" title="Java IO 流（1）IO流介绍"></a>Java IO 流（1）IO流介绍</h1><h3 id="IO流定义："><a href="#IO流定义：" class="headerlink" title="IO流定义："></a>IO流定义：</h3><pre><code>流的本质是一组单向有序，分起始和终止的数据传输过程。需要导入import java.io.\*</code></pre><h3 id="IO流分类："><a href="#IO流分类：" class="headerlink" title="IO流分类："></a>IO流分类：</h3><h4 id="按数据类型分为：字节流和字符流"><a href="#按数据类型分为：字节流和字符流" class="headerlink" title="按数据类型分为：字节流和字符流"></a>按数据类型分为：字节流和字符流</h4><h5 id="字节流："><a href="#字节流：" class="headerlink" title="字节流："></a>字节流：</h5><pre><code>按字节进行读取（可以处理任意类型数据）</code></pre><h5 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h5><pre><code>字节流 \+ 编码表（处理纯文本数据优先考虑）</code></pre><p><img src="F:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C20170105182342227.jpg" alt></p>
+        <h1 id="Java-IO-流（1）IO流介绍"><a href="#Java-IO-流（1）IO流介绍" class="headerlink" title="Java IO 流（1）IO流介绍"></a>Java IO 流（1）IO流介绍</h1><h3 id="IO流定义："><a href="#IO流定义：" class="headerlink" title="IO流定义："></a>IO流定义：</h3><pre><code>流的本质是一组单向有序，分起始和终止的数据传输过程。需要导入import java.io.\*</code></pre><h3 id="IO流分类："><a href="#IO流分类：" class="headerlink" title="IO流分类："></a>IO流分类：</h3><h4 id="按数据类型分为：字节流和字符流"><a href="#按数据类型分为：字节流和字符流" class="headerlink" title="按数据类型分为：字节流和字符流"></a>按数据类型分为：字节流和字符流</h4><h5 id="字节流："><a href="#字节流：" class="headerlink" title="字节流："></a>字节流：</h5><pre><code>按字节进行读取（可以处理任意类型数据）</code></pre><h5 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h5><pre><code>字节流 \+ 编码表（处理纯文本数据优先考虑）</code></pre><p><img src="F:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C20170105182342227.jpg" alt></p>
 <h4 id="按数据流向分为：输入流和输出流"><a href="#按数据流向分为：输入流和输出流" class="headerlink" title="按数据流向分为：输入流和输出流"></a>按数据流向分为：输入流和输出流</h4><h5 id="输入流"><a href="#输入流" class="headerlink" title="输入流"></a>输入流</h5><pre><code>有Reader（字符输入流）、InputStream（字节输入流）</code></pre><h5 id="输出流"><a href="#输出流" class="headerlink" title="输出流"></a>输出流</h5><pre><code>有Writer（字符输出流）、OutputStream（字节输出流）</code></pre><h4 id="按复杂程度分为：基本流和包装流"><a href="#按复杂程度分为：基本流和包装流" class="headerlink" title="按复杂程度分为：基本流和包装流"></a>按复杂程度分为：基本流和包装流</h4><h5 id="基本流"><a href="#基本流" class="headerlink" title="基本流"></a>基本流</h5><h5 id="包装流"><a href="#包装流" class="headerlink" title="包装流"></a>包装流</h5><h2 id="IO-流四大基类"><a href="#IO-流四大基类" class="headerlink" title="IO 流四大基类"></a>IO 流四大基类</h2><h3 id="InputStream-（字节输入流）"><a href="#InputStream-（字节输入流）" class="headerlink" title="InputStream （字节输入流）"></a>InputStream （字节输入流）</h3><p><img src="F:%5Cblog%5Cmyblog%5Csource_posts%5CJava%20IO%20%E6%B5%81%EF%BC%881%EF%BC%89IO%E6%B5%81%E4%BB%8B%E7%BB%8D%5C%E6%97%A0%E6%A0%87%E9%A2%98.png" alt></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">InputStream</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">Closeable</span></span></span><br></pre></td></tr></table></figure>
 
@@ -456,8 +459,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Writer	        <span class="title">append</span><span class="params">(<span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function">Writer	        <span class="title">append</span><span class="params">(CharSequence csq)</span></span></span><br><span class="line"><span class="function">Writer	        <span class="title">append</span><span class="params">(CharSequence csq, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span></span><br><span class="line"><span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span>	<span class="title">close</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span>	<span class="title">flush</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>	        <span class="title">write</span><span class="params">(<span class="keyword">char</span>[] cbuf)</span></span></span><br><span class="line"><span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span>	<span class="title">write</span><span class="params">(<span class="keyword">char</span>[] cbuf, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>	        <span class="title">write</span><span class="params">(<span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>	        <span class="title">write</span><span class="params">(String str)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>	        <span class="title">write</span><span class="params">(String str, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span></span></span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
     
@@ -472,342 +473,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/03/Java基础知识1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ethan Wong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ethan 的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/03/Java基础知识1/" itemprop="url">Java基础知识1</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-03T15:38:19+08:00">
-                2019-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-            
+            <a href="/tags/IO流/" rel="tag"># IO流</a>
           
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  559
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-如何理解：Write-once-Run-anywhere？"><a href="#1-如何理解：Write-once-Run-anywhere？" class="headerlink" title="1. 如何理解：Write once, Run anywhere？"></a>1. 如何理解：Write once, Run anywhere？</h2><pre><code>    当源码(.java文件)编写好后，首先编译生成.class文件（字节码文件）
-JVM作用是将通用的.class文件翻译成特定平台下的机器码然后运行。
-1.执行的是字节码(bytecode),而不是二进制码
-2.java语言跨平台本质上并不是JVM跨平台</code></pre><h2 id="2-JVM，JRE，JDK的区别与联系？"><a href="#2-JVM，JRE，JDK的区别与联系？" class="headerlink" title="2. JVM，JRE，JDK的区别与联系？"></a>2. JVM，JRE，JDK的区别与联系？</h2><h3 id="a-JVM"><a href="#a-JVM" class="headerlink" title="a. JVM:"></a>a. JVM:</h3><pre><code>JVM就是我们常说的java虚拟机，它是整个java实现跨平台的 最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可 以在虚拟机上执行，也就是说class并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解 释给本地系统执行。</code></pre><h3 id="b-JRE："><a href="#b-JRE：" class="headerlink" title="b. JRE："></a>b. JRE：</h3><pre><code>JRE是指Java的运行环境，而且在jre目录中有两个文件夹bin和lib,在这里可以认为bin里的就是jvm，lib中则是jvm工 作所需要的类库，而jvm和 lib和起来就称为jre。</code></pre><h3 id="c-JDK："><a href="#c-JDK：" class="headerlink" title="c. JDK："></a>c. JDK：</h3><pre><code>是java开发工具包，有一个src类库源码压缩包、和其他几个声明文件。Bin,include,lib,jre四个文件夹。
-§ bin: 最主要的是编译器(javac.exe)
-§ include: java和JVM交互用的头文件
-§ lib: 类库
-§ jre: java运行环境</code></pre><h3 id="d-两个jre的联系和区别"><a href="#d-两个jre的联系和区别" class="headerlink" title="d. 两个jre的联系和区别"></a>d. 两个jre的联系和区别</h3><pre><code>jdk里的jre和独立安装的jre完全相同，没有区别，在jdk里的jre既是工具环境又是运行环境。单独出来只是为了满足只有运行没有编写的场景和情形。
- HelloWorld.java --&gt;javac 编译 --&gt; HelloWorld.class --&gt;java 解释执行 --&gt; 该系统环境下的机器码(二进制码)--&gt;运行结果</code></pre><h3 id="e-SDK"><a href="#e-SDK" class="headerlink" title="e. SDK"></a>e. SDK</h3><pre><code>是Software Development Kit缩写，泛指所有软件开发工具包。</code></pre><h2 id="3-常见的-Dos-命令"><a href="#3-常见的-Dos-命令" class="headerlink" title="3.     常见的 Dos 命令"></a>3.     常见的 Dos 命令</h2><pre><code>○ 盘符切换：d:
-○ 列出目录下的所有文件和文件夹：dir
-○ 创建目录：md aaa
-○ 删除目录：rd aaa
-○ 切换路径：cd
-    § 单级切换：cd aaa
-    § 多级切换：cd aaa/bbb
-    § 切换到上一级目录: cd ..    cd ../..
-    § 切换到根目录：cd /
-○ 删除文件：del
-    § del a.txt
-○ 删除多个文件：
-    § del *.java
-    § del *副本*.java
-○ 清屏：cls
-○ 退出：exit</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/Java基础知识2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ethan Wong">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ethan 的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/02/Java基础知识2/" itemprop="url">Java基础知识2</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T15:30:58+08:00">
-                2019-06-02
-              </time>
+              <a href="/2019/06/03/Java基础知识1/" rel="next" title="Java基础知识1">
+                <i class="fa fa-chevron-left"></i> Java基础知识1
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  561
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>##数据类型：</p>
-<h5 id="1-Java是一种强类型语言，针对每种数据都提供了对应的数据类型。"><a href="#1-Java是一种强类型语言，针对每种数据都提供了对应的数据类型。" class="headerlink" title="(1) Java是一种强类型语言，针对每种数据都提供了对应的数据类型。"></a>(1) Java是一种强类型语言，针对每种数据都提供了对应的数据类型。</h5><h5 id="2-分类："><a href="#2-分类：" class="headerlink" title="(2) 分类："></a>(2) 分类：</h5><pre><code>A. 基本数据类型
-B. 引用数据类型：类，接口，数组。</code></pre><h5 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="(3) 类型转换"></a>(3) 类型转换</h5><h6 id="i-boolean类型不参和其他类型进行转换。"><a href="#i-boolean类型不参和其他类型进行转换。" class="headerlink" title="i. boolean类型不参和其他类型进行转换。"></a>i. boolean类型不参和其他类型进行转换。</h6><h6 id="ii-默认转换：要从小到大"><a href="#ii-默认转换：要从小到大" class="headerlink" title="ii. 默认转换：要从小到大"></a>ii. 默认转换：要从小到大</h6><pre><code>A. byte,short,char --&gt; int --&gt; long --&gt; float --&gt; double
-B. byte,short,char之间不相互转换，直接转成int类型参与运算。即使是同一个数据类型的运算，也会先转换成int类型。</code></pre><h5 id="4-运算"><a href="#4-运算" class="headerlink" title="(4) 运算"></a>(4) 运算</h5><h6 id="i-字符运算相当于ASCII码int型运算"><a href="#i-字符运算相当于ASCII码int型运算" class="headerlink" title="i. 字符运算相当于ASCII码int型运算"></a>i. 字符运算相当于ASCII码int型运算</h6><h6 id="ii-字符串运算相当于拼接"><a href="#ii-字符串运算相当于拼接" class="headerlink" title="ii. 字符串运算相当于拼接"></a>ii. 字符串运算相当于拼接</h6><p>##变量：<br>    1.成员变量（instance variable）：又叫做对象变量、类成员变量<br>        随着对象的建立而存在堆内存中。<br>    2.局部变量（local）：声明在方法中的变量。在栈中<br>        只存在于方法中，无法在方法外进行任何操作，<br>    3.类变量（静态变量）static+变量<br>        是一种比较特殊的实例变量，是类中独立于方法之外的变量，用static关键字修饰。在程序加载时就为它在堆中开辟了内存，而且静态变量的生命周期将一直持续到整个系统关闭。</p>
-<p>##运算符：<br>        (1) 算术运算符<br>            i. ++和–放在操作数后面的原理 举例：a = a++;<br>                int temp = a;<br>                a++;<br>                a = temp;<br>        (2) 赋值运算符<br>            i. 赋值运算符“=”特点<br>                A. 赋值运算符从右向左结合<br>                B. 赋值表达式有值=右边表达式的值<br>            ii. 扩展运算符“+=”，“-=”等等<br>                A. 隐含了自动强制转换<br>        (3) 比较运算符<br>            i. 最终结果始终是boolean类型<br>        (4) 逻辑运算符<br>            i. ^:相同则false,不同则true<br>            ii. &amp;&amp;和&amp;的区别，&amp;&amp;有短路效果<br>        (5) 位运算符<br>                a: 判断一个数是否是奇数    a &amp; 1 == 1;<br>                b: 对2 ^ n 取余。        a &amp; (2^n - 1);<br>                c: 如何判断一个数是否是2^n    a &amp; (a-1) == 0<br>                d: 两个整数之间的交换；<br>                e: 有一堆数，都是成对出现的，只有一个单独的，找出这个单独的数<br>                f: 用最有效率的方式求2 * 8的值        2 &lt;&lt; 3;</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -817,10 +514,11 @@ B. byte,short,char之间不相互转换，直接转成int类型参与运算。�
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -828,6 +526,10 @@ B. byte,short,char之间不相互转换，直接转成int类型参与运算。�
 
 
           
+
+  
+
+
 
         </div>
         
@@ -848,8 +550,17 @@ B. byte,short,char之间不相互转换，直接转成int类型参与运算。�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -927,6 +638,22 @@ B. byte,short,char之间不相互转换，直接转成int类型参与运算。�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-IO-流（1）IO流介绍"><span class="nav-number">1.</span> <span class="nav-text">Java IO 流（1）IO流介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IO流定义："><span class="nav-number">1.0.1.</span> <span class="nav-text">IO流定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO流分类："><span class="nav-number">1.0.2.</span> <span class="nav-text">IO流分类：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#按数据类型分为：字节流和字符流"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">按数据类型分为：字节流和字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字节流："><span class="nav-number">1.0.2.1.1.</span> <span class="nav-text">字节流：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符流"><span class="nav-number">1.0.2.1.2.</span> <span class="nav-text">字符流</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按数据流向分为：输入流和输出流"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">按数据流向分为：输入流和输出流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#输入流"><span class="nav-number">1.0.2.2.1.</span> <span class="nav-text">输入流</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出流"><span class="nav-number">1.0.2.2.2.</span> <span class="nav-text">输出流</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按复杂程度分为：基本流和包装流"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">按复杂程度分为：基本流和包装流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本流"><span class="nav-number">1.0.2.3.1.</span> <span class="nav-text">基本流</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#包装流"><span class="nav-number">1.0.2.3.2.</span> <span class="nav-text">包装流</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO-流四大基类"><span class="nav-number">1.1.</span> <span class="nav-text">IO 流四大基类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#InputStream-（字节输入流）"><span class="nav-number">1.1.1.</span> <span class="nav-text">InputStream （字节输入流）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法及成员方法"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">构造方法及成员方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OutputStream-（字节输出流）"><span class="nav-number">1.1.2.</span> <span class="nav-text">OutputStream （字节输出流）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法及成员方法-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">构造方法及成员方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reader-（字符输入流）"><span class="nav-number">1.1.3.</span> <span class="nav-text">Reader （字符输入流）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法及成员方法-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">构造方法及成员方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Writer-（字符输出流）"><span class="nav-number">1.1.4.</span> <span class="nav-text">Writer （字符输出流）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法及成员函数"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">构造方法及成员函数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1086,6 +813,10 @@ B. byte,short,char之间不相互转换，直接转成int类型参与运算。�
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
